@@ -27,4 +27,4 @@ awk '$2 !~ /\/proc\/fs\/nfsd/ && $3 ~ /nfs/ { print $2 }' /proc/mounts | while r
 sleep 10
 tar czvf /tmp/$casenumber.tar.gz /tmp/*.out /tmp/performance.pcap /var/log/messages
 
-echo -e 'DONE: Compressed statistics data can be found in' /tmp/$caenumber.tar.gz
+echo -e 'DONE: Compressed statistics data can be found in' /tmp/$casenumber.tar.gz
