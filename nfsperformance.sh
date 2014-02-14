@@ -4,8 +4,7 @@
 
 # -- SETUP -- 
 
-# Case number 
-casenumber=01036336
+casenumber=X
 
 # -- END SETUP -- 
 
