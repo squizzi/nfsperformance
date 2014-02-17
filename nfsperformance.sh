@@ -51,7 +51,7 @@ iostat -ct $interval > /tmp/nfs_cpu.out &
 
 # Wait 10 minutes, then kill all above commands 
 sleep $capture
-kill -9 $(jobs -p)
+kill -9 $(jobs -p) > /dev/null 2>&1
 
 # Run mountstats on each NFS mount point
 awk '$2 !~ /\/proc\/fs\/nfsd/ && $3 ~ /nfs/ { print $2 }' /proc/mounts | while read nfsmounts; do date >> /tmp/mountstats.out ; echo "NFS Mount: $nfsmounts" >> /tmp/mountstats.out; mountstats --rpc $nfsmounts >> /tmp/mountstats.out; mountstats --nfs $nfsmounts >> /tmp/mountstats.out; done
