@@ -3,7 +3,7 @@
 ## Maintainer: Kyle Squizzato - ksquizza@redhat.com
 
 ## Fill in each of the variables in the SETUP section then start the script
-## to capture performance data.  Script captures, NFS memory usage, CPU, local disk
+## to capture performance data.  Script captures NFS memory usage, CPU, local disk
 ## IOs, stack traces and a tcpdump.  
 
 
