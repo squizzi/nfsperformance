@@ -47,7 +47,7 @@ nfsiostat $interval > /tmp/nfsiostat.out &
 iostat -xt $interval > /tmp/iostat.out & 
 iostat -ct $interval > /tmp/nfs_cpu.out & 
 (while true; do echo "t" > /proc/sysrq-trigger; sleep $str; done) &
-(while true; do date >> /tmp/nfs_meminfo.out; cat /proc/meminfo | egrep "(Dirty|Writeback|NFS_Unstable):" >> /tmp/nfs_meminfo.out; sleep 5; done) &
+(while true; do date >> /tmp/nfs_meminfo.out; cat /proc/meminfo | egrep "(Dirty|Writeback|NFS_Unstable):" >> /tmp/nfs_meminfo.out; sleep $interval; done) &
 
 # Wait 10 minutes, then kill all above commands 
 sleep $capture
