@@ -43,7 +43,7 @@ tcpdump="tcpdump -s 512 -i $interface host $server -W 1 -C 1024M -w /tmp/perform
 
 # Capture data for NFS performance problems  
 $tcpdump &
-nfsiostat $interval /nfs/mount/point > /tmp/nfsiostat.out & 
+nfsiostat $interval > /tmp/nfsiostat.out & 
 iostat -xt $interval > /tmp/iostat.out & 
 iostat -ct $interval > /tmp/nfs_cpu.out & 
 (while true; do echo "t" > /proc/sysrq-trigger; sleep $str; done) &
