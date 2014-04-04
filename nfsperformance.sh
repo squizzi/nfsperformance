@@ -1,5 +1,5 @@
 #!/bin/bash
-## Super awful NFS performance data capture script
+##NFS performance data capture script
 ## Maintainer: Kyle Squizzato - ksquizza@redhat.com
 
 ## Fill in each of the variables in the SETUP section then start the script
